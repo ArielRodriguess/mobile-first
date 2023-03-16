@@ -1,0 +1,75 @@
+@charset "UTF-8";
+
+/* Todas as demais mídias */
+
+/* Tipical Device Breakpoints
+-----------------------------
+Pequenas Telas: até 600px
+Celular: de 600px até 768px
+Tablet: 769px até 992px
+Desktop: 993px até 1200px
+Grandes Telas: acima de 1200px 
+
+*/
+
+/* Impressão */
+@media print {
+  /* background-image: url('../images/back-print.jpg'); Desnecessário */
+
+  main { border: 2px solid black; }
+
+  main h1 {
+     text-shadow: none;
+    color: black;
+  }
+
+  main::after {
+    content: 'Esta impressão foi feita através do Desenvolvedor Ariel Rodrigues';
+  }
+
+  #print { display: block; }
+  #phone { display: none; }
+} 
+
+/* Tablet */
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  body {
+    background-image: url('../images/back-tablet.jpg');
+  }
+
+  main {
+    width: 450px;
+  }
+
+  #tablet { display: block; }
+  #phone { display: none; }
+} 
+
+/* Desktop */
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+  body {
+    background-image: url('../images/back-pc.jpg');
+  }
+
+  main {
+    width: 500px;
+  }
+
+  #pc { display: block; }
+  #phone { display: none; }
+} 
+
+
+/* Grandes Telas */
+@media screen and (min-width: 1201px) {
+  body {
+    background-image: url('../images/back-tv.jpg');
+  }
+
+  main {
+    width: 550px;
+  }
+
+  #tv { display: block; }
+  #phone { display: none; }
+} 
